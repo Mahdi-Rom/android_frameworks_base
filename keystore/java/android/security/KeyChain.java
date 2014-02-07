@@ -278,6 +278,8 @@ public final class KeyChain {
         }
         Intent intent = new Intent(ACTION_CHOOSER);
         intent.setPackage(KEYCHAIN_PACKAGE);
+        intent.setPackage(CERT_INSTALLER_PACKAGE);
+		KeyChain: add explicit package for getPrivateKey.
         intent.putExtra(EXTRA_RESPONSE, new AliasResponse(response));
         intent.putExtra(EXTRA_HOST, host);
         intent.putExtra(EXTRA_PORT, port);
