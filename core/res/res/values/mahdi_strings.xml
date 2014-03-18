@@ -19,13 +19,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Power menu -->
-    <string name="global_action_reboot">Reboot</string>
+    <string name="global_action_reboot">Riavvia</string>
     <!-- Button to reboot the phone, within the Phone Options dialog -->
-    <string name="reboot_system" product="tablet">Reboot tablet</string>
-    <string name="reboot_system" product="default">Reboot phone</string>
+    <string name="reboot_system" product="tablet">Riavvia tablet</string>
+    <string name="reboot_system" product="default">Riavvia telefono</string>
 
     <!-- Button to reboot the phone, within the Reboot Options dialog -->
-    <string name="reboot_reboot">Reboot</string>
+    <string name="reboot_reboot">Riavvia</string>
     <!-- Button to reboot the phone into recovery, within the Reboot Options dialog -->
     <string name="reboot_recovery">Recovery</string>
     <!-- Button to reboot the phone into bootloader, within the Reboot Options dialog -->
@@ -38,154 +38,153 @@
     <string name="reboot_download">Download</string>
 
     <!-- Reboot Progress Dialog. This is shown if the user chooses to reboot the phone. -->
-    <string name="reboot_progress">Rebooting\u2026</string>
+    <string name="reboot_progress">Riavvio in corso\u2026</string>
     <!-- Reboot Confirmation Dialog.  When the user chooses to reboot the phone, there will be a confirmation dialog.  This is the message. -->
-    <string name="reboot_confirm" product="tablet">Your tablet will reboot.</string>
-    <string name="reboot_confirm" product="default">Your phone will reboot.</string>
+    <string name="reboot_confirm" product="tablet">Il tuo tablet si riavvierà.</string>
+    <string name="reboot_confirm" product="default">Il tuo telefono si riavvierà.</string>
 
     <!-- label for item that screenshots in phone options dialog -->
-    <string name="global_action_screenshot">Screenshot</string>
+    <string name="global_action_screenshot">Cattura schermata</string>
 
     <!-- label for screen record item in phone options dialog -->
-    <string name="global_action_screen_record">Screen record</string>
+    <string name="global_action_screen_record">Registra schermata</string>
 
     <!-- label for item that toggles global immersive mode -->
-    <string name="global_actions_toggle_global_immersive_mode">Immersive mode</string>
+    <string name="global_actions_toggle_global_immersive_mode">Modalità immersiva</string>
     <!-- status message in phone options dialog for when expand desktop mode is on -->
-    <string name="global_actions_global_immersive_mode_on_status">Enabled</string>
+    <string name="global_actions_global_immersive_mode_on_status">Abilitata</string>
     <!-- status message in phone options dialog for when expand desktop mode is off -->
-    <string name="global_actions_global_immersive_mode_off_status">Disabled</string>
+    <string name="global_actions_global_immersive_mode_off_status">Disabilitata</string>
 
     <!-- label for item that opens the profile choosing dialog -->
-    <string name="global_action_choose_profile">Profile</string>
+    <string name="global_action_choose_profile">Profilo</string>
 
     <!-- The title of the profile picker dialog. -->
-    <string name="profile_picker_title">Profiles</string>
+    <string name="profile_picker_title">Profili</string>
 
     <!-- The item label for the no profile selection item. -->
-    <string name="profile_none">None</string>
+    <string name="profile_none">Nessuno</string>
 
     <!-- Names of default profiles. -->
-    <string name="profileNameDefault">Default</string>
-    <string name="profileNameWork">Work</string>
-    <string name="profileNameHome">Home</string>
-    <string name="profileNameSilent">Silent</string>
-    <string name="profileNameNight">Night</string>
+    <string name="profileNameDefault">Predefinito</string>
+    <string name="profileNameWork">Lavoro</string>
+    <string name="profileNameHome">Casa</string>
+    <string name="profileNameSilent">Silenzioso</string>
+    <string name="profileNameNight">Notte</string>
     <string name="profileNameAutomobile">Automobile</string>
 
     <!-- Names of application groups. -->
-    <string name="profileGroupPhone">Phone</string>
-    <string name="profileGroupCalendar">Calendar</string>
+    <string name="profileGroupPhone">Telefono</string>
+    <string name="profileGroupCalendar">Calendario</string>
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">Email</string>
     <string name="profileGroupSMS">SMS</string>
 
     <!-- Name of wildcard profile. -->
-    <string name="wildcardProfile">Other</string>
+    <string name="wildcardProfile">Altro</string>
 
     <!-- Hardware Rotation lock string -->
-    <string name="toast_rotation_unlocked">Display rotation unlocked</string>
-    <string name="toast_rotation_locked">Display rotation locked</string>
+    <string name="toast_rotation_unlocked">Rotazione display bloccata</string>
+    <string name="toast_rotation_locked">Rotazione disllay sbloccata</string>
 
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permlab_cancelNotifications">cancel application notifications</string>
+    <string name="permlab_cancelNotifications">Cancela notifiche applicazione</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_cancelNotifications">Allows the app to cancel notifications created by other apps.</string>
+    <string name="permdesc_cancelNotifications">Consenti all'app di cancellare notifiche create da altre app.</string>
 
     <!-- Privacy Guard -->
-    <string name="permlab_changePrivacyGuardState">enable or disable privacy guard</string>
-    <string name="permdesc_changePrivacyGuardState">Allows the app to change whether another app runs with Privacy Guard. When an app is running with Privacy Guard, it will not have access to personal data such as contacts, call logs, or messages.</string>
-    <string name="privacy_guard_notification">Privacy Guard active</string>
-    <string name="privacy_guard_notification_detail"><xliff:g id="app">%1$s</xliff:g> will not be able to access personal data</string>
+    <string name="permlab_changePrivacyGuardState">Abilita o disabilita privacy guard</string>
+    <string name="permdesc_changePrivacyGuardState">Permette all'app di cambiare se un'altra app è eseguita con Privacy Guard. Quando una app è eseguita in Privacy Guard, non potrà accedere a dati personali come contatti, registro chiamate, o messaggi.</string>
+    <string name="privacy_guard_notification">Privacy Guard attivo</string>
+    <string name="privacy_guard_notification_detail"><xliff:g id="app">%1$s</xliff:g> non potrà accedere ai tuoi dati personali</string>
 
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permlab_recordScreen">Record content being displayed</string>
+    <string name="permlab_recordScreen">Viene visualizzato contenuto registrato</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_recordScreen">Allows the app to record the users screen.</string>
+    <string name="permdesc_recordScreen">Permetti all'app di registrare la schermata dell'utente.</string>
 
-    <string name="permlab_interceptSmsSent">intercept outgoing SMS</string>
+    <string name="permlab_interceptSmsSent">Intercetta SMS in uscita</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_interceptSmsSent">Allows the app to
-        intercept an outgoing SMS.
-        Malicious apps may use this to prevent outgoing SMS messages.</string>
+    <string name="permdesc_interceptSmsSent">Permetti all'app di intercettare SMS in uscita.
+        App malevole potrebbero usarlo per prevenire l'uscita di messaggi SMS.</string>
 
-    <string name="immersive_mode_confirmation_bottom">Swipe up from the bottom to exit full screen.</string>
+    <string name="immersive_mode_confirmation_bottom">Scorri dal basso verso l'alto per uscire dalla modalità schermo intero.</string>
 
     <!-- Lock screen always show battery -->
-    <string name="lockscreen_discharging">Discharging, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
+    <string name="lockscreen_discharging">Scaricamento, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
 
     <!-- Animation Strings -->
-    <string name="animation_default">Default</string>
-    <string name="animation_fade">Fade</string>
-    <string name="animation_slide_right">Slide in right</string>
-    <string name="animation_slide_left">Slide in left</string>
-    <string name="animation_slide_right_no_fade">Slide in right (No fade)</string>
-    <string name="animation_slide_left_no_fade">Slide in left (No fade)</string>
-    <string name="animation_slide_up">Slide in bottom</string>
-    <string name="animation_slide_down">Slide in top</string>
-    <string name="animation_translucent">Translucent</string>
-    <string name="animation_grow_shrink">Grow in (Top)</string>
-    <string name="animation_grow_shrink_center">Grow in (Center)</string>
-    <string name="animation_grow_shrink_bottom">Grow in (Bottom)</string>
-    <string name="animation_grow_shrink_left">Grow in (Left)</string>
-    <string name="animation_grow_shrink_right">Grow in (Right)</string>
-    <string name="animation_random">Random</string>
+    <string name="animation_default">Predefinito</string>
+    <string name="animation_fade">Dissolvi</string>
+    <string name="animation_slide_right">Scorri da destra</string>
+    <string name="animation_slide_left">Scorri da sinistra</string>
+    <string name="animation_slide_right_no_fade">Scorri da sinistra (Senza dissolvenza)</string>
+    <string name="animation_slide_left_no_fade">Scorri da destra (Senza dissolvenza)</string>
+    <string name="animation_slide_up">Scorri dal basso</string>
+    <string name="animation_slide_down">Scorri dall'alto</string>
+    <string name="animation_translucent">Traslucido</string>
+    <string name="animation_grow_shrink">Sali da (Sopra)</string>
+    <string name="animation_grow_shrink_center">sali da (Centro)</string>
+    <string name="animation_grow_shrink_bottom">Sali da (Basso)</string>
+    <string name="animation_grow_shrink_left">Sali da (Sinistra)</string>
+    <string name="animation_grow_shrink_right">Sali da (Destra)</string>
+    <string name="animation_random">Casuale</string>
 
     <!-- Title of an application permission that lets an application view/edit revoked permissions. -->
-    <string name="permlab_revokePermissions">Allows view and edit of revoked permissions. Not for use by normal applications.</string>
+    <string name="permlab_revokePermissions">Permette la visualizzazione e modifica di permessi revocati. Non utile ad applicazioni normali.</string>
     <!-- Description of an application permission that lets lets an application view/edit revoked permissions. -->
-    <string name="permdesc_revokePermissions">Allows read and write for revoked permissions. Not for use by normal applications.</string>
+    <string name="permdesc_revokePermissions">Permette lettura e scrittura di permessi revocati. Non utile ad applicazioni normali.</string>
 
     <!-- Title of an application permission that lets an application access the ThemeManagerService. -->
-    <string name="permlab_accessThemeService">Allows accessing the theme manager service. Not for use by normal applications.</string>
+    <string name="permlab_accessThemeService">Permette l'accesso al gestore di temi. Non utile ad applicazioni normali.</string>
     <!-- Description of an application permission that lets lets an application access the ThemeManagerService -->
-    <string name="permdesc_accessThemeService">Allows an application to set/reset themes. Not for use by normal applications.</string>
+    <string name="permdesc_accessThemeService">Permette ad un'applicazione di impostare/rimuovere un tema. Non utile ad applicazioni normali.</string>
 	
 	<!-- Error description on theme switch with ligtsensor mode enabled -->
-    <string name="theme_auto_switch_mode_error">Automatic light condition change mode is enabled. Manual switching is not possible.</string>
+    <string name="theme_auto_switch_mode_error">Cambiamento automatico variazione di luce è attivo. Cambiamento manuale non possibile.</string>
 
     <!-- App ops requests -->
-    <string name="app_ops_access_camera">access the camera</string>
-    <string name="app_ops_access_location">access your location</string>
-    <string name="app_ops_access_notifications">read your notifications</string>
-    <string name="app_ops_alarm_wakeup">wake up the device</string>
-    <string name="app_ops_draw_on_top">draw on top</string>
-    <string name="app_ops_keep_device_awake">keep your device awake</string>
-    <string name="app_ops_make_phone_call">make a phone call</string>
-    <string name="app_ops_modify_calendar">update your calendar</string>
-    <string name="app_ops_modify_call_log">update the call log</string>
-    <string name="app_ops_modify_clipboard">modify the clipboard</string>
-    <string name="app_ops_modify_contacts">update your contacts</string>
-    <string name="app_ops_modify_settings">update system settings</string>
-    <string name="app_ops_play_audio">play audio</string>
-    <string name="app_ops_post_notification">post a notification</string>
-    <string name="app_ops_read_calendar">read your calendar</string>
-    <string name="app_ops_read_call_log">read the call log</string>
-    <string name="app_ops_read_clipboard">read the clipboard</string>
-    <string name="app_ops_read_contacts">read your contacts</string>
-    <string name="app_ops_read_mms">read your MMS messages</string>
-    <string name="app_ops_read_sms">read your SMS messages</string>
-    <string name="app_ops_receive_sms">receive an SMS message</string>
-    <string name="app_ops_record_audio">record audio</string>
-    <string name="app_ops_send_mms">send an MMS message</string>
-    <string name="app_ops_send_sms">send an SMS message</string>
-    <string name="app_ops_start_at_bootup">start at power up</string>
-    <string name="app_ops_toggle_bluetooth">toggle Bluetooth</string>
-    <string name="app_ops_toggle_mobile_data">toggle mobile data</string>
-    <string name="app_ops_toggle_wifi">toggle WiFi</string>
-    <string name="app_ops_use_alarm_volume">control alarm volume</string>
-    <string name="app_ops_use_audio_focus">control the audio focus</string>
-    <string name="app_ops_use_bluetooth_volume">control the Bluetooth volume</string>
-    <string name="app_ops_use_master_volume">control the master volume</string>
-    <string name="app_ops_use_media_buttons">use the media buttons</string>
-    <string name="app_ops_use_media_volume">control the media volume</string>
-    <string name="app_ops_use_notification_volume">control the notification volume</string>
-    <string name="app_ops_use_ring_volume">control the ringtone volume</string>
-    <string name="app_ops_use_vibrate">use haptic feedback</string>
-    <string name="app_ops_use_voice_volume">control the voice call volume</string>
-    <string name="app_ops_write_mms">write an MMS message</string>
-    <string name="app_ops_write_sms">write an SMS message</string>
+    <string name="app_ops_access_camera">accesso alla fotocamera</string>
+    <string name="app_ops_access_location">accesso alla posizione</string>
+    <string name="app_ops_access_notifications">legge notifiche</string>
+    <string name="app_ops_alarm_wakeup">wakelock</string>
+    <string name="app_ops_draw_on_top">traccia in alto</string>
+    <string name="app_ops_keep_device_awake">mantieni attivo</string>
+    <string name="app_ops_make_phone_call">chiamate telefono</string>
+    <string name="app_ops_modify_calendar">aggiorna calendario</string>
+    <string name="app_ops_modify_call_log">aggiorna registro chiamate</string>
+    <string name="app_ops_modify_clipboard">modifica clipboard</string>
+    <string name="app_ops_modify_contacts">aggiorna contatti</string>
+    <string name="app_ops_modify_settings">aggiorna impostazioni sistema</string>
+    <string name="app_ops_play_audio">avvia audio</string>
+    <string name="app_ops_post_notification">pubblica notifica</string>
+    <string name="app_ops_read_calendar">legge calendario</string>
+    <string name="app_ops_read_call_log">legge registro chiamate</string>
+    <string name="app_ops_read_clipboard">legge clipboard</string>
+    <string name="app_ops_read_contacts">visualizza contatti</string>
+    <string name="app_ops_read_mms">legge MMS</string>
+    <string name="app_ops_read_sms">legge SMS</string>
+    <string name="app_ops_receive_sms">riceve SMS</string>
+    <string name="app_ops_record_audio">registra audio</string>
+    <string name="app_ops_send_mms">manda MMS</string>
+    <string name="app_ops_send_sms">manda SMS</string>
+    <string name="app_ops_start_at_bootup">avvio automatico</string>
+    <string name="app_ops_toggle_bluetooth">attiva Bluetooth</string>
+    <string name="app_ops_toggle_mobile_data">attiva dati mobili</string>
+    <string name="app_ops_toggle_wifi">attiva WiFi</string>
+    <string name="app_ops_use_alarm_volume">controlla volume allarme</string>
+    <string name="app_ops_use_audio_focus">controlla focus audio</string>
+    <string name="app_ops_use_bluetooth_volume">controlla volume bluetooth</string>
+    <string name="app_ops_use_master_volume">controlla volume principale</string>
+    <string name="app_ops_use_media_buttons">usa tasti media</string>
+    <string name="app_ops_use_media_volume">controlla volume media</string>
+    <string name="app_ops_use_notification_volume">controlla volume di notifica</string>
+    <string name="app_ops_use_ring_volume">ccontrolla volume suoneria</string>
+    <string name="app_ops_use_vibrate">usa feedback tattile</string>
+    <string name="app_ops_use_voice_volume">controla volume chiamate</string>
+    <string name="app_ops_write_mms">scrive MMS</string>
+    <string name="app_ops_write_sms">scrive SMS</string>
 
     <string name="privacy_guard_dialog_title">Privacy Guard</string>
-    <string name="privacy_guard_dialog_summary"><xliff:g id="app">%1$s</xliff:g> would like to <xliff:g id="op">%2$s</xliff:g>.</string>
+    <string name="privacy_guard_dialog_summary"><xliff:g id="app">%1$s</xliff:g> vorrebbe <xliff:g id="op">%2$s</xliff:g>.</string>
 </resources>
