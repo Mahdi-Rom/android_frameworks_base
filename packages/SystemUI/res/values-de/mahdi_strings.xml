@@ -64,12 +64,47 @@
     <string name="quick_settings_quiethours">Ruhige Stunden</string>
     <string name="quick_settings_quiethours_off">Ruhige Stunden aus</string>
     <string name="quick_settings_quick_record_nofile">Langer-Druck</string>
-    <string name="quick_settings_quick_record_def">Quick Record</string>
+    <string name="quick_settings_quick_record_def">Sprachaufnahme</string>
     <string name="quick_settings_quick_record_rec">Aufnahme...</string>
     <string name="quick_settings_quick_record_save">Gespeichert</string>
     <string name="quick_settings_quick_record_play">Abspielen...</string>
     <string name="quick_settings_custom_toggle">Angepasst</string>
     <string name="quick_settings_contact_toggle">Kontakt</string>
+    <string name="quick_settings_battery_saver_label">Energiesparmodus eingeschaltet</string>
+    <string name="quick_settings_battery_saver_off_label">Energiespramodus ausgeschaltet</string>
+    <string name="quick_settings_network_type">Netzwerkstatus</string>
+    <string name="quick_settings_network_unknown">Unbekannt</string>
+    <string name="quick_settings_network_disable">Kein Internet</string>
+    
+    <!-- Network Strings for battery saver mode -->
+    <string name="network_4G">4G/LTE</string>
+    <string name="network_3G_only">3G</string>
+    <string name="network_3G_auto">2G/3G Auto</string>
+    <string name="network_3G">2G/3G Bevorzugt</string>
+    <string name="network_2G">2G</string>
+
+    <!-- battery saver mode -->
+    <string name="battery_saver_start">Energiesparmodus aktiviert</string>
+    <string name="battery_saver_stop">Energiesparmodus deaktiviert</string>
+    <string name="battery_saver_change">Netzwerk geändert: </string>
+    <string name="battery_saver_network">Netzwerk wieder hergestellt</string>
+    <string name="battery_saver_data">Mobile Datenverbindung wieder hergestellt</string>
+    <string name="battery_saver_brightness">Bildschirmhelligkeit wieder hergestellt</string>
+    <string name="battery_saver_bluetooth">Bluetooth wieder hergestellt</string>
+    <string name="battery_saver_location">GPS wieder hergestellt</string>
+    <string name="battery_saver_wifi">WLAN wieder hergestellt</string>
+    <string name="battery_saver_cpu">CPU wieder hergestellt</string>
+    <string name="battery_saver_cpu_change">Neue CPU-Frequenz</string>
+    <string name="battery_saver_sync">Syncronisation wieder hergestellt</string>
+    <string name="battery_saver_led">LED-Benachrichtigung wieder hergestellt</string>
+    <string name="battery_saver_vibrate">Vibration wieder hergestellt</string>
+    <string name="battery_saver_all">Konfigurationen wieder hergestellt</string>
+    <string name="battery_saver_no_changes">Keine Konfiguration wieder hergestellt</string>
+    <string name="battery_saver_enable_ticker">Energiesparmodus aktiviert...</string>
+    <string name="battery_saver_enable_title">Energiesparmodus</string>
+    <string name="battery_saver_airplane_ticker">Flugmodus wurde durch den Energiesparmodus aktiviert</string>
+    <string name="battery_saver_airplane_text">Flugmodus wurde durch den Energiesparmodus aktiviert da nach 5 Minuten kein Netz gefunden wurde</string>
+    <string name="battery_saver_disable">Deaktiviert</string>
 	
     <!-- Immersive mode strings break the rules a bit - the icon identifies the feature, the string indicates current state -->
     <string name="quick_settings_immersive_mode">Erweitert</string>
@@ -156,6 +191,7 @@
     <string name="chamber_title">Eingabe</string>
     <string name="chamber_message">Geben Sie eine Zeichenfolge ein welche entweder die Einstellungen ein-und ausschaltet (Checkbox)-Funktion oder einer Listen-Präferenz. Zum Beispiel quiet_hours_ringer oder ähnliches. Die Einstellungen können in der Settings.java Datei gefunden werden. WARNUNG: Dieser Vorgang ist gefährlich!</string>
     <string name="chamber_invalid">Ungültige Eingabe - sei vorsichtig.</string>
+    <string name="chamber_invalid_setting">Bitte manuell umschalten, um Sicherzustellen das die Einstellungen für diese Aktion in der Datenbank auch existiert.</string>
     <string name="chamber_checkbox">Checkbox</string>
     <string name="chamber_chk_message">Handelt es sich um eine Checkbox Einstellung?</string>
     <string name="chamber_int">Eingabewerte</string>
@@ -163,28 +199,6 @@
     <string name="chamber_name_title">Name der Verknüpfung</string>
     <string name="chamber_name_message">Geben Sie der Verknüpfung einen Namen. Wird zusammen mit dem Symbol angezeigt wird.</string>
     <string name="chamber_name_toast">Standard verwenden</string>
-   
-    <!-- battery saver mode -->
-    <string name="battery_saver_start">Energiesparmodus aktiviert</string>
-    <string name="battery_saver_stop">Energiesparmodus deaktiviert</string>
-    <string name="battery_saver_change">Netzwerk geändert: </string>
-    <string name="battery_saver_network">Netzwerk wieder hergestellt</string>
-    <string name="battery_saver_data">Mobile Datenverbindung wieder hergestellt</string>
-    <string name="battery_saver_wifi">WLAN wieder hergestellt</string>
-    <string name="battery_saver_all">Konfigurationen wieder hergestellt</string>
-    <string name="battery_saver_no_changes">Keine Konfiguration wieder hergestellt</string>
-    <string name="battery_saver_enable_ticker">Energiesparmodus aktiviert...</string>
-    <string name="battery_saver_enable_title">Energiesparmodus</string>
-    <string name="battery_saver_airplane_ticker">Flugmodus wurde durch den Energiesparmodus aktiviert</string>
-    <string name="battery_saver_airplane_text">Flugmodus wurde durch den Energiesparmodus aktiviert da nach 5 Minuten kein Netz gefunden wurde</string>
-    <string name="battery_saver_disable">Deaktiviert</string>
-    <!-- Battery Saver -->
-    <string name="network_4G">4G/LTE</string>
-    <string name="network_3G_only">3G</string>
-    <string name="network_3G_auto">2G/3G Automatisch</string>
-    <string name="network_3G">2G/3G Bevorzugt</string>
-    <string name="network_2G">2G</string>
-    <string name="quick_settings_network_unknown">Unbekannt</string>
 
     <!-- Title shown in recents popup for locking an app from being cleared -->
     <string name="status_bar_recent_lock_item_title">Gesperrt</string>
