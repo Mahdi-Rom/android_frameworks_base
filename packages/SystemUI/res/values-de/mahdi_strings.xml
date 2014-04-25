@@ -72,7 +72,6 @@
     <string name="quick_settings_contact_toggle">Kontakt</string>
     <string name="quick_settings_battery_saver_label">Energiesparmodus eingeschaltet</string>
     <string name="quick_settings_battery_saver_off_label">Energiespramodus ausgeschaltet</string>
-    <string name="quick_settings_network_type">Netzwerkstatus</string>
     <string name="quick_settings_network_unknown">Unbekannt</string>
     <string name="quick_settings_network_disable">Kein Internet</string>
     
@@ -196,7 +195,7 @@
     <string name="chamber_int_message">Geben Sie die gewünschten Werte ein, zwischen denen umgeschaltet werden soll. Trennen Sie die einzelnen Werte durch ein Komma. Farbeinstellungen durch Hex-Werte wie # FF00aacc oder Grundfarbwerte wie rot, grün und gelb eingeben.</string>
     <string name="chamber_name_title">Name der Verknüpfung</string>
     <string name="chamber_name_message">Geben Sie der Verknüpfung einen Namen. Wird zusammen mit dem Symbol angezeigt wird.</string>
-    <string name="chamber_name_toast">Standard verwenden</string>
+    <string name="chamber_name_toast">Standard verwendet</string>
 
     <!-- Title shown in recents popup for locking an app from being cleared -->
     <string name="status_bar_recent_lock_item_title">Gesperrt</string>
@@ -233,4 +232,11 @@
     <string name="pie_phone_status_no_service">Kein Empfang</string>
     <string name="pie_phone_status_airplane_mode">Flugmodus aktiviert</string>
     <string name="pie_phone_status_emergency_only">Nur Notrufe</string>
+
+    <!-- Smart PullDown Warning -->
+    <string name="smart_pulldown_disabled">Intelligentes Öffnen ist deaktiviert</string>
+
+    <!-- Navigation bar IME navigation -->
+    <string name="accessibility_ime_navigation_left">Cursor links</string>
+    <string name="accessibility_ime_navigation_right">Cursor rechts</string>
 </resources>
