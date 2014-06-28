@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2012-2013 The Mahdi-Rom Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- * you may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at 
- *
- *     http://www.apache.org/licenses/LICENSE-2.0 
- *
- * Unless required by applicable law or agreed to in writing, software 
- * distributed under the License is distributed on an "AS IS" BASIS, 
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
- * See the License for the specific language governing permissions and 
- * limitations under the License.
- */
+* Copyright (C) 2012-2013 The Mahdi-Rom Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">    
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- QuickSettings: Profile [CHAR LIMIT=NONE] -->
     <string name="quick_settings_profile_label">Profile</string>
 
@@ -83,7 +83,7 @@
     <string name="quick_settings_compass_off">Kompass aus</string>
     <string name="quick_settings_compass_init">Initialisierung\u2026</string>
 
-	
+
     <!-- Network Strings for battery saver mode -->
     <string name="network_4G">4G/LTE</string>
     <string name="network_3G_only">3G</string>
@@ -108,7 +108,7 @@
     <string name="battery_saver_airplane_ticker">Flugmodus wurde durch den Energiesparmodus aktiviert</string>
     <string name="battery_saver_airplane_text">Flugmodus wurde durch den Energiesparmodus aktiviert da nach 5 Minuten kein Netz gefunden wurde</string>
     <string name="battery_saver_disable">Deaktiviert</string>
-	
+
     <!-- Immersive mode strings break the rules a bit - the icon identifies the feature, the string indicates current state -->
     <string name="quick_settings_immersive_mode">Erweitert</string>
     <string name="quick_settings_immersive_mode_off">Normal</string>
@@ -202,11 +202,6 @@
     <string name="chamber_name_message">Geben Sie der Verknüpfung einen Namen. Wird zusammen mit dem Symbol angezeigt wird.</string>
     <string name="chamber_name_toast">Standard verwendet</string>
 
-    <!-- Title shown in recents popup for locking an app from being cleared -->
-    <string name="status_bar_recent_lock_item_title">Gesperrt</string>
-    <!-- Title shown in recents popup for unlocking an app from being cleared -->
-    <string name="status_bar_recent_unlock_item_title">Entsperrt</string>
-
     <!-- On the go -->
     <string name="onthego_notif_ticker">On-The-Go aktiviert</string>
     <string name="onthego_notif_title">On-The-Go ist aktiv</string>
@@ -244,7 +239,7 @@
     <!-- Navigation bar IME navigation -->
     <string name="accessibility_ime_navigation_left">Cursor links</string>
     <string name="accessibility_ime_navigation_right">Cursor rechts</string>
-	
+
     <!-- Title shown in notification popup for launching notification in floating mode -->
     <string name="status_bar_notification_floating_item_title">Überlagerungsmodus</string>
     
@@ -259,4 +254,7 @@
 
     <!-- Title shown when app provides no interface -->
     <string name="status_bar_floating_no_interface">Die App stellt keine Schnittstelle bereit</string>
+
+    <!-- Content description for the add quick settings tile button. [CHAR LIMIT=NONE] -->
+    <string name="accessibility_desc_add_quick_settings">Schnelleinstellungen hinzufügen.</string>
 </resources>
