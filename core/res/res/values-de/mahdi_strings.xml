@@ -81,16 +81,16 @@
     <string name="profile_none">Keine</string>
 
     <!-- Names of default profiles. -->
-    <string name="profileNameDefault">Default</string>
-    <string name="profileNameWork">Work</string>
-    <string name="profileNameHome">Home</string>
-    <string name="profileNameSilent">Silent</string>
-    <string name="profileNameNight">Night</string>
-    <string name="profileNameAutomobile">Automobile</string>
+    <string name="profileNameDefault">Standard</string>
+    <string name="profileNameWork">Arbeit</string>
+    <string name="profileNameHome">Zuhause</string>
+    <string name="profileNameSilent">Stumm</string>
+    <string name="profileNameNight">Nachts</string>
+    <string name="profileNameAutomobile">Auto</string>
 
     <!-- Names of application groups. -->
-    <string name="profileGroupPhone">Phone</string>
-    <string name="profileGroupCalendar">Calendar</string>
+    <string name="profileGroupPhone">Telefon</string>
+    <string name="profileGroupCalendar">Kalender</string>
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">Email</string>
     <string name="profileGroupSMS">SMS</string>
@@ -121,7 +121,7 @@
     <string name="permlab_interceptSmsSent">Abfangen ausgehender SMS</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_interceptSmsSent">Ermöglicht einer App das Abfangen einer ausgehenden SMS. Bösartige Apps verwenden dies um ausgehnde SMS zu blockieren.</string>
-	
+
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permgrouplab_security">Sicherheit</string>
     <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
@@ -138,7 +138,7 @@
     <string name="permdesc_changePhoneBlacklist">Ermöglicht einer App Telefonnummern, die für eingehende Anrufe oder Nachrichten blockiert werden, zu ändern.</string>
 
     <string name="immersive_mode_confirmation_bottom">Von der Unterseite nach oben wischen um den erweiterterten Desktop zu beenden.</string>
-	
+
     <!-- Lock screen always show battery -->
     <string name="lockscreen_discharging">Entladen, <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g></string>
 
@@ -246,4 +246,12 @@
     <string name="permlab_setKeyguardWallpaper">Ändern des Sperrbildschirmhintergrunds</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_setKeyguardWallpaper">Ermöglicht einer App das Hintergrundbild der Display-Sperre zu ändern.</string>	
+
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_resetBatteryStats">Akkustatistik zurücksetzen</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_resetBatteryStats">Ermöglicht einer App das zurücksetzen der aktuellen Low-Level-Akku-Nutzungsdaten.</string>
+
+    <!-- WiFi turn off notification -->
+    <string name="notify_turn_wifi_off_title">WLAN ausschalten</string>
 </resources>
