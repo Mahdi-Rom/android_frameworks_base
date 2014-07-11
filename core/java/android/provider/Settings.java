@@ -6930,6 +6930,25 @@ public final class Settings {
          */
          public static final String PRIVACY_GUARD_DEFAULT = "privacy_guard_default";
 
+   	/**
+         * Whether a notification should be shown if privacy guard is enabled
+         * @hide
+         */
+         public static final String PRIVACY_GUARD_NOTIFICATION = "privacy_guard_notification";
+
+   	/**
+         * Whether a notification icon should be shown if privacy guard is enabled
+         * @hide
+         */
+         public static final String PRIVACY_GUARD_NOTIFICATION_ICON = "privacy_guard_notification_icon";
+
+   	/**
+         * Whether a notification icon should be shown if privacy guard is enabled
+         * @hide
+         */
+         public static final String PRIVACY_GUARD_NOTIFICATION_DISMISS = "privacy_guard_notification_dismiss";
+			
+
         /**
          * Whether to allow killing of the foreground app by long-pressing the Back button
          * @hide
@@ -7023,6 +7042,9 @@ public final class Settings {
             MOUNT_UMS_NOTIFY_ENABLED,
             UI_NIGHT_MODE,
             PRIVACY_GUARD_DEFAULT,
+            PRIVACY_GUARD_NOTIFICATION,
+            PRIVACY_GUARD_NOTIFICATION_ICON,
+            PRIVACY_GUARD_NOTIFICATION_DISMISS,
             DEVELOPMENT_SHORTCUT,
             UI_THEME_MODE,
             UI_THEME_AUTO_MODE
