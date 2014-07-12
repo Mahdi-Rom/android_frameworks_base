@@ -4355,7 +4355,20 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     private void recreateStatusBar(boolean recreateNavigationBar) {
         mRecreating = true;
 
+
         removeHeadsUpView();
+
+        if (mHeadsUpNotificationView != null) {
+            removeHeadsUpView();
+            mHeadsUpNotificationView = null;
+        }
+        
+        removeHeadsUpView();
+		//Only remove heads up if attached to window
+
+        mStatusBarContainer.removeAllViews();
+        mStatusBarContainer.clearDisappearingChildren();
+		//SystemUI: Clear disappearing children and remove HeadsUp on recreate.
 
         mStatusBarContainer.removeAllViews();
         mStatusBarContainer.clearDisappearingChildren();
