@@ -28,6 +28,7 @@ import android.view.View;
 import android.view.ViewParent;
 import android.widget.FrameLayout;
 
+import com.android.systemui.quicksettings.QuickSettingsTile;
 import com.android.systemui.R;
 
 /**
@@ -40,6 +41,7 @@ public class QuickSettingsTileView extends FrameLayout {
     private int mColSpan;
     private boolean mPrepared;
     private OnPrepareListener mOnPrepareListener;
+    private QuickSettingsTile mTile;
 
     public void setColors(int bgColor, int presColor, float bgAlpha) {
         if (bgColor != -2 || presColor != -2) {
@@ -58,6 +60,14 @@ public class QuickSettingsTileView extends FrameLayout {
 
         mContentLayoutId = -1;
         mColSpan = 1;
+    }
+
+    public void setTile(QuickSettingsTile tile) {
+        mTile = tile;
+    }
+
+    public QuickSettingsTile getTile() {
+        return mTile;
     }
 
     void setColumnSpan(int span) {
