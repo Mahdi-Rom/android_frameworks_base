@@ -53,8 +53,6 @@
     <string name="privacy_guard_notification_detail"><xliff:g id="app">%1$s</xliff:g>は個人データにアクセスできません</string>
     <string name="profile_picker_title">プロファイル</string>
     <string name="profile_none">なし</string>
-    <string name="permlab_interceptSmsSent">送信するSMSの傍受</string>
-    <string name="permdesc_interceptSmsSent">送信するSMSの傍受をアプリケーションに許可します。悪意のあるアプリケーションがメッセージの送信を阻止するおそれがあります。</string>
     <string name="immersive_mode_confirmation_bottom">画面の最下部から上にスワイプするとフルスクリーンを終了します。</string>
     
     <string name="global_action_screen_record">画面の録画</string>
@@ -122,6 +120,7 @@
     <string name="app_ops_toggle_bluetooth">Bluetoothの切り替え</string>
     <string name="app_ops_toggle_mobile_data">モバイルデータの切り替え</string>
     <string name="app_ops_toggle_wifi">Wi-Fiの切り替え</string>
+    <string name="app_ops_toggle_nfc">NFCの切り替え</string>
     <string name="app_ops_use_alarm_volume">アラームの音量</string>
     <string name="app_ops_use_audio_focus">音声フォーカス</string>
     <string name="app_ops_use_bluetooth_volume">Bluetoothの音量</string>
