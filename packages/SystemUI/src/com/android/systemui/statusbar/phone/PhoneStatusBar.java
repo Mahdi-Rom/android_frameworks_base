@@ -3661,7 +3661,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
     @Override
     public void setImeWindowStatus(IBinder token, int vis, int backDisposition) {
-        final boolean altBack = (backDisposition == InputMethodService.BACK_DISPOSITION_WILL_DISMISS)
+        boolean altBack = (backDisposition == InputMethodService.BACK_DISPOSITION_WILL_DISMISS)
             || ((vis & InputMethodService.IME_VISIBLE) != 0);
 
         // If IME shows and heads up gravity is at the bottom, move it to the top.
@@ -3674,23 +3674,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 altBack ? (mNavigationIconHints | NAVIGATION_HINT_BACK_ALT)
                         : (mNavigationIconHints & ~NAVIGATION_HINT_BACK_ALT));
         if (mQS != null) mQS.setImeWindowStatus(vis > 0);
-        if (vis > 0) {
-            mHandler.sendEmptyMessage(MSG_HIDE_HEADS_UP);
-        }
-
-        if (mCurrentColorProgress != 0) {
-            if (mImeStatusShow) {
-                mImeStatusShow = altBack;
-                setSystemUIBackgroundColor(300);
-            } else {
-                mHandler.postDelayed(new Runnable() {
-                     @Override
-                     public void run() {
-                         mImeStatusShow = altBack;
-                     }
-                }, AUTOHIDE_TIMEOUT_MS);
-            }
-        }
+        setSystemUIBackgroundColorOnIme(altBack);
     }
 
     @Override
@@ -4233,6 +4217,22 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         }
     }
 
+    private void setSystemUIBackgroundColorOnIme(final boolean altBack) {
+        if (mCurrentColorProgress != 0) {
+            if (mImeStatusShow) {
+                mImeStatusShow = altBack;
+            } else {
+                mHandler.postDelayed(new Runnable() {
+                     @Override
+                     public void run() {
+                         mImeStatusShow = altBack;
+                     }
+                }, 2000);
+            }
+            setSystemUIBackgroundColor(500);
+        }
+    }
+
     private void setSystemUIBackgroundColor(int duration) {
         if (mSystemUIOpaque || mImeStatusShow) {
             mHandler.removeCallbacks(mTintedStatusbarRunnable);
@@ -4300,6 +4300,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         if (!mTintedNeedReset) {
             return;
         }
+        Log.w(TAG, "Reset tinted statusbar");
         mTintedNeedReset = false;
         mHandler.removeCallbacks(mSetColorFromScreenShotRunnable);
         mHandler.removeCallbacks(mTintedStatusbarRunnable);
@@ -4311,7 +4312,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         if (mNavigationBarView != null) {
             mNavigationBarView.getBarTransitions().changeColorIconBackground(mPackageNv, mPackageIcSt);
         }
-        Log.w(TAG, "Reset tinted statusbar");
     }
 
     private void setSystemUIBackgroundGradient(boolean force) {
@@ -4332,7 +4332,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             if (mStatusbarTransparent < 100) {
                 mPackageSt = ColorUtils.changeColorTransparency(mPackageSt, mStatusbarTransparent);
             }
-            Log.w(TAG, "process statusbar color");
             mStatusBarView.getBarTransitions().changeColorIconBackground(mPackageSt, mPackageIcSt);
             int colorFromStatusbar = mStatusBarView.getPhoneStatusBarTransitions().getCurrentIconColor();
             boolean shouldChange = (colorFromStatusbar != -3);
@@ -4346,7 +4345,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             if (mNavbarTransparent < 100) {
                 mPackageNv = ColorUtils.changeColorTransparency(mPackageNv, mNavbarTransparent);
             }
-            Log.w(TAG, "process navbar color");
             mNavigationBarView.getBarTransitions().changeColorIconBackground(mPackageNv, mPackageIcSt);
         }
         if (mStatBackgroundMode || mNavBackgroundMode) {

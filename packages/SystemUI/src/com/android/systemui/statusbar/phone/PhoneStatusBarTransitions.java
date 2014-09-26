@@ -45,6 +45,7 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
     private View mLeftSide, mStatusIcons, mSignalCluster, mBattery, mClock, mCenterClock, mNetworkTraffic;
     private Animator mCurrentAnimation;
     private int mCurrentColor;
+    private int mCurrentBg;
 
     public PhoneStatusBarTransitions(PhoneStatusBarView view) {
         super(view, R.drawable.status_background, R.color.status_bar_background_opaque,
@@ -101,6 +102,10 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
 
     @Override
     public void changeColorIconBackground(int bg_color, int ic_color) {
+        if (mCurrentBg == bg_color) {
+            return;
+        }
+        mCurrentBg = bg_color;
         if (ColorUtils.isBrightColor(bg_color)) {
             ic_color = Color.BLACK;
         }
