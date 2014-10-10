@@ -154,4 +154,8 @@
     <string name="permdesc_resetBatteryStats">現在の低残量バッテリーの使用データのリセットをアプリに許可する</string>
     <string name="notify_turn_wifi_off_title">Wi-FiはOFFです</string>
     <string name="usb_storage_notification_manage_message">タップして管理</string>
+    <string name="theme_install_error_title">テーマのインストールに失敗しました</string>
+    <string name="theme_install_error_message">%sのインストールに失敗しました</string>
+    <string name="permlab_useHardwareFramework">ハードウェアのフレームワークを使用</string>
+    <string name="permdesc_useHardwareFramework">アプリによるハードウェアのフレームワークへのアクセスを許可する</string>
 </resources>
