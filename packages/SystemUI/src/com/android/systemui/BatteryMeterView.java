@@ -23,6 +23,7 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
@@ -37,6 +38,8 @@ import android.provider.Settings;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.View;
+
+import com.android.internal.util.omni.ColorUtils;
 
 public class BatteryMeterView extends View implements DemoMode {
     public static final String TAG = BatteryMeterView.class.getSimpleName();
@@ -162,6 +165,8 @@ public class BatteryMeterView extends View implements DemoMode {
 
     private String mWarningString;
     private final int mChargeColor;
+    private int mChangeColor = -3;
+    private int mBoltColor = -3;
 
     protected boolean mDemoMode;
     protected BatteryTracker mDemoTracker = new BatteryTracker();
@@ -289,9 +294,23 @@ public class BatteryMeterView extends View implements DemoMode {
         for (int i=0; i<mColors.length; i+=2) {
             thresh = mColors[i];
             color = mColors[i+1];
-            if (percent <= thresh) return color;
+            if (percent <= thresh) {
+                if (mChangeColor != -3) {
+                    return mChangeColor;
+                } else {
+                    return color;
+                }
+            }
+        }
+        if (mChangeColor != -3) {
+            return mChangeColor;
         }
         return color;
+    }
+
+    public void updateSettings(int color) {
+        mChangeColor = color;
+        postInvalidate();
     }
 
     public void setShowPercent(boolean show) {
@@ -432,7 +451,8 @@ public class BatteryMeterView extends View implements DemoMode {
 
             mBoltPaint = new Paint();
             mBoltPaint.setAntiAlias(true);
-            mBoltPaint.setColor(res.getColor(R.color.batterymeter_bolt_color));
+            mBoltColor = res.getColor(R.color.batterymeter_bolt_color);
+            mBoltPaint.setColor(mBoltColor);
             mBoltPoints = loadBoltPoints(res);
         }
 
@@ -494,7 +514,16 @@ public class BatteryMeterView extends View implements DemoMode {
             c.drawRect(mFrame, mFramePaint);
 
             // fill 'er up
-            final int color = tracker.plugged ? mChargeColor : getColorForLevel(level);
+            int color = 0;
+            if (tracker.plugged) {
+                if (mChangeColor != -3) {
+                    color = mChangeColor;
+                } else {
+                    color = mChargeColor;
+                }
+            } else {
+                color = getColorForLevel(level);
+            }
             mBatteryPaint.setColor(color);
 
             if (level >= FULL) {
@@ -519,6 +548,15 @@ public class BatteryMeterView extends View implements DemoMode {
 
             if (tracker.shouldIndicateCharging()) {
                 // draw the bolt
+                if (mChangeColor != -3) {
+                    int colorSt = Color.WHITE;
+                    if (ColorUtils.isBrightColor(mChangeColor)) {
+                        colorSt = Color.BLACK;
+                    }
+                    mBoltPaint.setColor(colorSt);
+                } else {
+                    mBoltPaint.setColor(mBoltColor);
+                }
                 final float bl = (int)(mFrame.left + mFrame.width() / (mHorizontal ? 9f : 4.5f));
                 final float bt = (int)(mFrame.top + mFrame.height() / (mHorizontal ? 4.5f : 6f));
                 final float br = (int)(mFrame.right - mFrame.width() / (mHorizontal ? 6f : 7f));
@@ -564,6 +602,11 @@ public class BatteryMeterView extends View implements DemoMode {
                                 : (tracker.level == 100 ? full : nofull)));
                 mTextHeight = -mTextPaint.getFontMetrics().ascent;
 
+                int textColor = 0xFFFFFFFF;
+                if (mChangeColor != -3) {
+                    textColor = mChangeColor;
+                }
+                mTextPaint.setColor(textColor);
                 final String str = String.valueOf(SINGLE_DIGIT_PERCENT ? (level/10) : level);
                 final float x  = mWidth * 0.5f;
                 final float y = pt + (height + mTextHeight) * 0.47f;
