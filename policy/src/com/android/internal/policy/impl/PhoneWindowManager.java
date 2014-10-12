@@ -1713,13 +1713,12 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
             setHasNavigationBar();
 
-            if (mHasNavigationBar) {
-                // Height of the navigation bar when presented horizontally at bottom *******
-                int navigationBarHeight = Settings.System.getIntForUser(resolver,
-                        Settings.System.NAVIGATION_BAR_HEIGHT,
-                        -1, UserHandle.USER_CURRENT);
-                if (navigationBarHeight == -1) {
-                    navigationBarHeight = mContext.getResources().getDimensionPixelSize(
+            mNavigationBarHeight =
+                    Settings.System.getIntForUser(mContext.getContentResolver(),
+                            Settings.System.NAVIGATION_BAR_HEIGHT, -2,
+                            UserHandle.USER_CURRENT);
+            if (mNavigationBarHeight == -2) {
+                mNavigationBarHeight = mContext.getResources().getDimensionPixelSize(
                         com.android.internal.R.dimen.navigation_bar_height);
             } else {
                 mNavigationBarHeight =
@@ -1810,7 +1809,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             mCurrentColorProgress = Settings.System.getIntForUser(
                     resolver, Settings.System.STATUS_BAR_TINTED_COLOR, 0
                     , UserHandle.USER_CURRENT) != 0;
-            }
         }
 
         if (updateRotation) {
