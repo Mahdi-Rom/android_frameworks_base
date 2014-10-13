@@ -51,6 +51,11 @@ public class CarrierLabel extends TextView {
 
     private Context mContext;
 
+    private int mCurrentColor = -3;
+
+    int carrierColor = getResources().getColor(R.color.status_bar_clock_color);
+    int nowColor = mCurrentColor != -3 ? mCurrentColor : carrierColor;
+
     public CarrierLabel(Context context) {
         this(context, null);
     }
@@ -63,6 +68,22 @@ public class CarrierLabel extends TextView {
         super(context, attrs, defStyle);
         mContext = context;
         updateNetworkName(false, null, false, null);
+    }
+
+    public void updateSettings(int defaultColor) {
+        if (mCurrentColor != defaultColor) {
+            mCurrentColor = defaultColor;
+            updateSettings();
+        }
+    }
+
+    public void updateSettings() {
+        ContentResolver resolver = mContext.getContentResolver();
+        int carrierColor = getResources().getColor(R.color.status_bar_clock_color);
+        int nowColor = mCurrentColor != -3 ? mCurrentColor : carrierColor;
+        if (mAttached) {
+            setTextColor(nowColor);
+        }
     }
 
     @Override
