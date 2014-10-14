@@ -53,9 +53,6 @@ public class CarrierLabel extends TextView {
 
     private int mCurrentColor = -3;
 
-    int carrierColor = getResources().getColor(R.color.status_bar_clock_color);
-    int nowColor = mCurrentColor != -3 ? mCurrentColor : carrierColor;
-
     public CarrierLabel(Context context) {
         this(context, null);
     }

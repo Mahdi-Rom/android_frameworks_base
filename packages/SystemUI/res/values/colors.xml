@@ -33,9 +33,10 @@
     <drawable name="notification_header_bg">#FF000000</drawable>
     <drawable name="reminder_bg_pressed">#FF191919</drawable>
     <color name="notification_panel_scrim_color">#B0000000</color>
-    <color name="batterymeter_frame_color">#66FFFFFF</color><!-- 40% white -->
+    <color name="batterymeter_frame_color">#778c8686</color><!-- 40% white -->
     <color name="batterymeter_charge_color">#FFFFFFFF</color>
     <color name="batterymeter_bolt_color">#B2000000</color><!-- 70% black -->
+    <color name="batterymeter_bolt_color_white">#FFFFFFFF</color>
     <color name="batterymeter_critical">#FFFF3300</color>
     <color name="batterymeter_low">#FFFF3300</color>
     <color name="batterymeter_full">#FFFFFFFF</color>

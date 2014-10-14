@@ -69,7 +69,6 @@ public final class NavigationBarTransitions extends BarTransitions {
 
     public void setVertical(boolean isVertical) {
         if (mVertical != isVertical) {
-            setIsVertical(isVertical);
             mVertical = isVertical;
             updateBackgroundResource();
         }

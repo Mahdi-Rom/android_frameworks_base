@@ -438,7 +438,7 @@ public class BatteryMeterView extends View implements DemoMode {
             mBatteryPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 
             mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-            mTextPaint.setColor(res.getColor(R.color.batterymeter_bolt_color));
+            mTextPaint.setColor(mBoltColor);
             Typeface font = Typeface.create("sans-serif-condensed", Typeface.BOLD);
             mTextPaint.setTypeface(font);
             mTextPaint.setTextAlign(Paint.Align.CENTER);
@@ -602,11 +602,15 @@ public class BatteryMeterView extends View implements DemoMode {
                                 : (tracker.level == 100 ? full : nofull)));
                 mTextHeight = -mTextPaint.getFontMetrics().ascent;
 
-                int textColor = 0xFFFFFFFF;
                 if (mChangeColor != -3) {
-                    textColor = mChangeColor;
+                    int textColor = Color.WHITE;
+                    if (ColorUtils.isBrightColor(mChangeColor)) {
+                        textColor = Color.BLACK;
+                    }
+                    mTextPaint.setColor(textColor);
+                } else {
+                    mTextPaint.setColor(mBoltColor);
                 }
-                mTextPaint.setColor(textColor);
                 final String str = String.valueOf(SINGLE_DIGIT_PERCENT ? (level/10) : level);
                 final float x  = mWidth * 0.5f;
                 final float y = pt + (height + mTextHeight) * 0.47f;
@@ -668,6 +672,7 @@ public class BatteryMeterView extends View implements DemoMode {
         private Paint   mFrontPaint;
         private Paint   mBackPaint;
         private Paint   mBoltPaint;
+        private int mBoltColor = -3;
 
         private final RectF mBoltFrame = new RectF();
         private final float[] mBoltPoints;
@@ -699,6 +704,7 @@ public class BatteryMeterView extends View implements DemoMode {
 
             mBoltPaint = new Paint();
             mBoltPaint.setAntiAlias(true);
+            mBoltColor = res.getColor(R.color.batterymeter_bolt_color_white);
             mBoltPaint.setColor(getColorForLevel(50));
             mBoltPoints = loadBoltPoints(res);
         }
@@ -793,6 +799,16 @@ public class BatteryMeterView extends View implements DemoMode {
                     mBoltPath.lineTo(
                             mBoltFrame.left + mBoltPoints[0] * mBoltFrame.width(),
                             mBoltFrame.top + mBoltPoints[1] * mBoltFrame.height());
+                }
+                int color = 0;
+                if (mChangeColor != -3) {
+                    int colorSt = Color.BLACK;
+                    if (ColorUtils.isBrightColor(mChangeColor)) {
+                        colorSt = Color.WHITE;
+                    }
+                    mBoltPaint.setColor(colorSt);
+                } else {
+                    mBoltPaint.setColor(mBoltColor);
                 }
                 canvas.drawPath(mBoltPath, mBoltPaint);
 
