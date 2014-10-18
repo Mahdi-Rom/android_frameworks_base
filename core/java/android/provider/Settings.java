@@ -4689,6 +4689,13 @@ public final class Settings {
          */
         public static final String PA_PIE_GRAVITY = "pa_pie_gravity";
 
+       /**
+        * Disable the statusbar ticker
+        * Default is enabled
+        * @hide
+        */
+        public static final String TICKER_DISABLED = "ticker_disabled";
+
         /**
          * Whether to use a separate delay for "slide to unlock" and security
          * lock
