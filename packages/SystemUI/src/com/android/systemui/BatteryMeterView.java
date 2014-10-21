@@ -50,6 +50,7 @@ public class BatteryMeterView extends View implements DemoMode {
     public static enum BatteryMeterMode {
         BATTERY_METER_GONE,
         BATTERY_METER_ICON_PORTRAIT,
+        BATTERY_METER_ICON_PORTRAIT_SLIM,
         BATTERY_METER_ICON_LANDSCAPE,
         BATTERY_METER_CIRCLE,
         BATTERY_METER_TEXT
@@ -245,10 +246,13 @@ public class BatteryMeterView extends View implements DemoMode {
                 return new TextBatteryMeterDrawable(res);
 
             case BATTERY_METER_ICON_LANDSCAPE:
-                return new NormalBatteryMeterDrawable(res, true);
+                return new NormalBatteryMeterDrawable(res, true, false);
+
+            case BATTERY_METER_ICON_PORTRAIT_SLIM:
+                return new NormalBatteryMeterDrawable(res, false, true);
 
             default:
-                return new NormalBatteryMeterDrawable(res, false);
+                return new NormalBatteryMeterDrawable(res, false, false);
         }
     }
 
@@ -264,6 +268,12 @@ public class BatteryMeterView extends View implements DemoMode {
             onSizeChanged(width, height, 0, 0); // Force a size changed event
         } else if (mMeterMode.compareTo(BatteryMeterMode.BATTERY_METER_ICON_LANDSCAPE) == 0) {
             width = (int)(height * 1.2f);
+        } else if (mMeterMode.compareTo(BatteryMeterMode.BATTERY_METER_ICON_PORTRAIT_SLIM) == 0) {
+            if (mShowPercent) {
+                width = (int)(height / 0.8f);
+            } else {
+                width = (int)(height / 2f);
+            }
         }
         setMeasuredDimension(width, height);
     }
@@ -295,14 +305,14 @@ public class BatteryMeterView extends View implements DemoMode {
             thresh = mColors[i];
             color = mColors[i+1];
             if (percent <= thresh) {
-                if (mChangeColor != -3) {
+                if (mChangeColor != -3 && !(percent <= 15)) {
                     return mChangeColor;
                 } else {
                     return color;
                 }
             }
         }
-        if (mChangeColor != -3) {
+        if (mChangeColor != -3 && !(percent <= 15)) {
             return mChangeColor;
         }
         return color;
@@ -317,6 +327,7 @@ public class BatteryMeterView extends View implements DemoMode {
         if (ENABLE_PERCENT) {
             mShowPercent = show;
             invalidateIfVisible();
+            requestLayout();
         }
     }
 
@@ -340,6 +351,7 @@ public class BatteryMeterView extends View implements DemoMode {
                 mBatteryMeterDrawable = createBatteryMeterDrawable(mode);
             }
             if (mMeterMode == BatteryMeterMode.BATTERY_METER_ICON_PORTRAIT ||
+                    mMeterMode == BatteryMeterMode.BATTERY_METER_ICON_PORTRAIT_SLIM ||
                     mMeterMode == BatteryMeterMode.BATTERY_METER_ICON_LANDSCAPE) {
                 ((NormalBatteryMeterDrawable)mBatteryMeterDrawable).loadBoltPoints(
                         mContext.getResources());
@@ -407,6 +419,7 @@ public class BatteryMeterView extends View implements DemoMode {
         private boolean mDisposed;
 
         protected final boolean mHorizontal;
+        protected final boolean mPortraitSlim;
 
         private Paint mFramePaint, mBatteryPaint, mWarningTextPaint, mTextPaint, mBoltPaint;
         private int mButtonHeight;
@@ -420,9 +433,10 @@ public class BatteryMeterView extends View implements DemoMode {
         private final RectF mClipFrame = new RectF();
         private final RectF mBoltFrame = new RectF();
 
-        public NormalBatteryMeterDrawable(Resources res, boolean horizontal) {
+        public NormalBatteryMeterDrawable(Resources res, boolean horizontal, boolean portraitSlim) {
             super();
             mHorizontal = horizontal;
+            mPortraitSlim = portraitSlim;
             mDisposed = false;
 
             mFramePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -473,9 +487,13 @@ public class BatteryMeterView extends View implements DemoMode {
             int width = mWidth - pl - pr;
 
             mButtonHeight = (int) ((mHorizontal ? width : height) * 0.12f);
-
-            mFrame.set(0, 0, width, height);
-            mFrame.offset(pl, pt);
+            if (mPortraitSlim && mShowPercent) {
+                mFrame.set(0, 0, (width / 3), height);
+                mFrame.offset(pl + ((width / 3) * 2), pt);
+            } else {
+                mFrame.set(0, 0, width, height);
+                mFrame.offset(pl, pt);
+            }
 
             if (mHorizontal) {
                 mButtonFrame.set(
@@ -593,29 +611,56 @@ public class BatteryMeterView extends View implements DemoMode {
                 if (mHorizontal) {
                     c.restore();
                 }
-            } else if (mShowPercent && !(tracker.level == 100 && !SHOW_100_PERCENT)) {
+            }
+
+            if (mShowPercent) {
                 final float full = mHorizontal ? 0.60f : 0.45f;
                 final float nofull = mHorizontal ? 0.75f : 0.6f;
                 final float single = mHorizontal ? 0.86f : 0.75f;
-                mTextPaint.setTextSize(height *
+                if (mPortraitSlim) {
+                    mTextPaint.setTextSize(height *
+                        (SINGLE_DIGIT_PERCENT ? 0.80f
+                                : (tracker.level == 100 ? 0.54f : 0.6f)));
+                } else {
+                    mTextPaint.setTextSize(height *
                         (SINGLE_DIGIT_PERCENT ? single
                                 : (tracker.level == 100 ? full : nofull)));
+                }
                 mTextHeight = -mTextPaint.getFontMetrics().ascent;
 
                 if (mChangeColor != -3) {
-                    int textColor = Color.WHITE;
+                    int txtColorBl = Color.BLACK;
+                    int txtColorWh = Color.WHITE;
                     if (ColorUtils.isBrightColor(mChangeColor)) {
-                        textColor = Color.BLACK;
+                        txtColorBl = Color.WHITE;
+                        txtColorWh = Color.BLACK;
                     }
-                    mTextPaint.setColor(textColor);
+                    if (!mPortraitSlim) {
+                        txtColorBl = mChangeColor;
+                    } else {
+                        txtColorWh = mChangeColor;
+                    }
+                    mTextPaint.setColor(mPortraitSlim ? txtColorBl : txtColorWh);
+                } else if (mPortraitSlim) {
+                    mTextPaint.setColor(Color.WHITE);
                 } else {
-                    mTextPaint.setColor(mBoltColor);
+                    mTextPaint.setColor(Color.BLACK);
                 }
                 final String str = String.valueOf(SINGLE_DIGIT_PERCENT ? (level/10) : level);
-                final float x  = mWidth * 0.5f;
+                final float x;
+                if (mPortraitSlim) {
+                    x = (mWidth * 0.5f) - (mWidth * 0.25f);
+                } else {
+                    x = mWidth * 0.5f;
+                }
                 final float y = pt + (height + mTextHeight) * 0.47f;
 
-                c.drawText(str, x, y, mTextPaint);
+                if ((!mPortraitSlim && tracker.shouldIndicateCharging()) ||
+                    (!mPortraitSlim && level == 100)) {
+                    return;
+                } else {
+                    c.drawText(str, x, y, mTextPaint);
+                }
             }
         }
 

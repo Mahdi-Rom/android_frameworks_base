@@ -4512,6 +4512,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 mode = BatteryMeterMode.BATTERY_METER_TEXT;
                 break;
 
+            case 7:
+                mode = BatteryMeterMode.BATTERY_METER_ICON_PORTRAIT_SLIM;
+                break;
+
             default:
                 break;
         }
