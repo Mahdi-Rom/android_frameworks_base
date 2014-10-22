@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2012-2013 The Mahdi-Rom Project
+ * Copyright (C) 2013-2014 The Mahdi-Rom Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  * you may not use this file except in compliance with the License. 
@@ -78,10 +78,15 @@
     <string name="quick_settings_battery_saver_label">Энергосбережение</string>
     <string name="quick_settings_network_unknown">Неизвестн.</string>
     <string name="quick_settings_network_disable">Нет сети</string>
-    <string name="quick_settings_bluetooth_multi_label">%1$d подключен</string>
     <string name="quick_settings_equalizer">Эквалайзер</string>
     <string name="quick_settings_compass_off">Компас выкл</string>
     <string name="quick_settings_compass_init">Инициализация\u2026</string>
+
+    <!-- Number of current connected bluetooth devices
+         Appears only when 2 or more devices are connected -->
+    <plurals name="quick_settings_bluetooth_multi_label">
+        <item quantity="other">%1$d подключен</item>
+    </plurals>
 	
     <!-- Network Strings for battery saver mode -->
     <string name="network_4G">4G/LTE</string>
@@ -263,4 +268,10 @@
     <string name="app_float_maximize_item_title">Развернуть</string>
     <string name="app_float_item_title">Плавающий режим</string>
     <string name="app_stop_item_title">Закрыть приложение</string>
+    
+    <!-- PIE -->
+    <string name="pie_date_format">ccc, dd MMM yyyy</string>
+    <string name="pie_hour_format_12">hh:mm</string>
+    <string name="pie_hour_format_24">HH:mm</string>
+    <string name="pie_am_pm">a</string>
 </resources>

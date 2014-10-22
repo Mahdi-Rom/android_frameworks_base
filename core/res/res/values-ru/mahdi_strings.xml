@@ -2,7 +2,7 @@
 <!--
 /* //device/apps/common/assets/res/any/strings.xml
 **
-** Copyright 2013, Mahdi-Rom project
+** Copyright 2013-2014, Mahdi-Rom project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -139,6 +139,11 @@
     <string name="permlab_changePhoneBlacklist">Изменение чёрного списка</string>
     <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_changePhoneBlacklist">Приложение сможет изменять список абонентов, от которых заблокированы входящие звонки или сообщения.</string>
+    
+    <!-- Title of an application permission, listed so the user can choose whether they want the application to do this. -->
+    <string name="permlab_useHardwareFramework">Использовать аппаратный фреймворк</string>
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_useHardwareFramework">Разрешить приложению получать доступ к аппаратному фреймворку</string>    
 
     <string name="immersive_mode_confirmation_bottom">Чтобы вернуться в обычный режим, проведите пальцем вверх.</string>
 
@@ -254,4 +259,8 @@
     <string name="permlab_resetBatteryStats">сбросить статистику батареи</string>
     <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_resetBatteryStats">Позволяет приложению сбросить текущие данные об использовании батареи</string>
+    
+    <!-- Theme installation error notification -->
+    <string name="theme_install_error_title">Не удалось установить тему</string>
+    <string name="theme_install_error_message">%s не удалось установить</string>
 </resources>
