@@ -139,6 +139,11 @@
   <string name="permlab_changePhoneBlacklist">Αλλάγη της μαύρης λίστας της συσκευής</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_changePhoneBlacklist">Επιτρέπει την εφαρμογή να αλλάξει τους τηλεφωνικούς αριθμούς που έχουν φραγή σε εισερχόμενες κλήσεις και μηνύματα.</string>
+
+  <!-- Title of an application permission, listed so the user can choose whether they want the application to do this. -->
+  <string name="permlab_useHardwareFramework">Χρήση πλαίσιου υλικού</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_useHardwareFramework">Επιτρέπει μια εφαρμογή να έχει πρόσβαση στο πλαίσιο υλικού.</string>
   
   <string name="immersive_mode_confirmation_bottom">Σύρτε απο το κατω μέρος της οθόνης προς τα πάνω για να βγείτε απο την πλήρη οθόνη.</string>
   
