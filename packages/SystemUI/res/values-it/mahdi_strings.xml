@@ -71,19 +71,24 @@
     <string name="quick_settings_quick_record_rec">Registrazione...</string>
     <string name="quick_settings_quick_record_save">Salvato</string>
     <string name="quick_settings_quick_record_play">Play...</string>
+    <string name="quick_settings_quick_record_dialog_cancel">Chiudi</string>
+    <string name="quick_settings_quick_record_dialog">Riproduci registrazione\nTieni premuto per eliminare</string>
     <string name="quick_settings_custom_toggle">Personalizzato</string>
     <string name="quick_settings_contact_toggle">Contatto</string>
-    <string name="quick_settings_battery_saver_label">Salva batteria acceso</string>
-    <string name="quick_settings_battery_saver_off_label">Salva batteria spento</string>
-    <string name="quick_settings_network_type">Stato di rete</string>
+    <string name="quick_settings_battery_saver_label">Salva batteria</string>
     <string name="quick_settings_network_unknown">Sconosciuto</string>
     <string name="quick_settings_network_disable">Nessuna connessione</string>
-    <string name="quick_settings_bluetooth_multi_label">%1$d connesso</string>
     <string name="quick_settings_equalizer">Equalizzatore</string>
     <string name="quick_settings_compass_off">Bussola spenta</string>
     <string name="quick_settings_compass_init">Inizializzazione\u2026</string>
     <string name="quick_settings_heads_up_on">Heads up attivo</string>
     <string name="quick_settings_heads_up_off">Non disturbare</string>
+    
+    <!-- Number of current connected bluetooth devices
+         Appears only when 2 or more devices are connected -->
+    <plurals name="quick_settings_bluetooth_multi_label">
+        <item quantity="other">%1$d connessi</item>
+    </plurals>
 	
     <!-- Network Strings for battery saver mode -->
     <string name="network_4G">4G/LTE</string>
@@ -133,11 +138,11 @@
     <string name="quick_settings_reminder">Reminder</string>
     <string name="quick_settings_reminder_title">Titolo:</string>
     <string name="quick_settings_reminder_message">Messaggio:</string>
-    <string name="quick_settings_reminder_time">Timeout reminder</string>
-    <string name="quick_settings_reminder_set">Imposta ora</string>
-    <string name="quick_settings_reminder_update">Aggiorna ora</string>
+    <string name="quick_settings_reminder_time">Orario reminder</string>
+    <string name="quick_settings_reminder_set">Imposta orario</string>
+    <string name="quick_settings_reminder_update">Aggiorna orario</string>
     <string name="quick_settings_reminder_no_expire">Non ci sono notifiche</string>
-    <string name="quick_settings_reminder_dismiss">Pulisci Reminder</string>
+    <string name="quick_settings_reminder_dismiss">Pulisci reminder</string>
     <string name="quick_settings_reminder_dismiss_message">Pulire l\'attuale reminder?</string>
     <string name="quick_settings_reminder_help_title">Tocca</string>
     <string name="quick_settings_reminder_noti_dismiss">Cancella</string>
@@ -145,7 +150,7 @@
     <string name="quick_settings_reminder_help_message">Tocca lo spazio vuoto sopra per mettere o cambiare il reminder. Tieni premuto per cancellare il reminder attuale</string>
 
     <!--ScreenShot Trash-->
-    <string name="trash">Cancella</string>
+    <string name="trash">Elimina</string>
 
     <!-- Kill app toast -->
     <string name="app_killed_message">Applicazioni chiuse</string>
@@ -259,4 +264,16 @@
     
     <!-- Spam notifications -->
     <string name="status_bar_notification_spam_item_title">Blocca messaggi come questi</string>
+    
+    <!-- App circle sidebar -->
+    <string name="app_stop_item_title">Chiudi app</string>
+    <string name="app_float_maximize_item_title">Massimizza</string>
+    <string name="app_float_item_title">Modalità floating</string>
+    <string name="app_stop_item_title">Chidui app</string>
+
+    <!-- PIE -->
+    <string name="pie_date_format">ccc, dd MMM yyyy</string>
+    <string name="pie_hour_format_12">hh:mm</string>
+    <string name="pie_hour_format_24">HH:mm</string>
+    <string name="pie_am_pm">a</string>
 </resources>
