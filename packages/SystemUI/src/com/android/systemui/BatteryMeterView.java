@@ -655,8 +655,8 @@ public class BatteryMeterView extends View implements DemoMode {
                 }
                 final float y = pt + (height + mTextHeight) * 0.47f;
 
-                if ((!mPortraitSlim && tracker.shouldIndicateCharging()) ||
-                    (!mPortraitSlim && level == 100)) {
+                if (!mPortraitSlim && (tracker.shouldIndicateCharging() ||
+                    level == 100 || level <= EMPTY)) {
                     return;
                 } else {
                     c.drawText(str, x, y, mTextPaint);
