@@ -39,9 +39,8 @@
     <string name="reboot_fastboot">Fastboot</string>
     <!-- Button to reboot the phone into download, within the Reboot Options dialog -->
     <string name="reboot_download">Download</string>
-    
     <!-- Button to soft reboot the device, within the Reboot Options dialog -->
-    <string name="reboot_soft">Riavvio soft</string>
+    <string name="reboot_soft">Riavvio veloce</string>
 
     <!-- Reboot Progress Dialog. This is shown if the user chooses to reboot the phone. -->
     <string name="reboot_progress">Riavvio\u2026</string>
@@ -141,6 +140,11 @@
     <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_changePhoneBlacklist">Permetti all\'applicazione di cambiare i numeri di telefono bloccati.</string>
 
+    <!-- Title of an application permission, listed so the user can choose whether they want the application to do this. -->
+    <string name="permlab_useHardwareFramework">usa framework hardware</string>
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_useHardwareFramework">Permetti ad un\'app di avvedere al framewrok hardware.</string>
+
     <string name="immersive_mode_confirmation_bottom">Swipe dal basso verso l\'alto per uscire dalla modalità schermo intero.</string>
 
     <!-- Lock screen always show battery -->
@@ -148,7 +152,7 @@
 
     <!-- Animation Strings -->
     <string name="animation_default">Predefinito</string>
-    <string name="animation_fade">Fade</string>
+    <string name="animation_fade">Dissolvenza</string>
     <string name="animation_slide_right">Slide da destra</string>
     <string name="animation_slide_left">Slide da sinistra</string>
     <string name="animation_slide_right_no_fade">Slide da destra(No dissolvenza)</string>
@@ -200,6 +204,7 @@
     <string name="app_ops_toggle_bluetooth">accendi/spegni bluetooth</string>
     <string name="app_ops_toggle_mobile_data">accendi/spegni dati mobili</string>
     <string name="app_ops_toggle_wifi">accendi/spegni Wi-Fi</string>
+    <string name="app_ops_toggle_nfc">accendi/spegni NFC</string>
     <string name="app_ops_use_alarm_volume">controlla il volume degli allarmi</string>
     <string name="app_ops_use_audio_focus">controlla il focus audio</string>
     <string name="app_ops_use_bluetooth_volume">controlla il volume del bluetooth</string>
@@ -263,4 +268,8 @@
     
     <!-- USB OTG notification message -->
     <string name="usb_storage_notification_manage_message">Clicca per gestire</string>
+    
+    <!-- Theme installation error notification -->
+    <string name="theme_install_error_title">Installazione tema fallita</string>
+    <string name="theme_install_error_message">Installazione di %s fallita</string>
 </resources>
