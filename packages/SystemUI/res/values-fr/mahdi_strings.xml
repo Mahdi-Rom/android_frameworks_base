@@ -82,6 +82,7 @@
     <string name="quick_settings_compass_off">Boussole désactivé</string>
     <string name="quick_settings_compass_init">Initialisation\u2026</string>
     <string name="quick_settings_heads_up_on">Notifications flottantes activées</string>
+	
     <string name="quick_settings_heads_up_off">Aucune interruption</string>
 
     <!-- Number of current connected bluetooth devices
